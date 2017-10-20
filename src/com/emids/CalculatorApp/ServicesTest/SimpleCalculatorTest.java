@@ -1,6 +1,5 @@
 package com.emids.CalculatorApp.ServicesTest;
 
-import static org.junit.Assert.*;
 
 import org.junit.Assert;
 import org.junit.Test;
