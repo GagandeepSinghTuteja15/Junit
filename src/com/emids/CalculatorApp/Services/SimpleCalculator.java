@@ -23,6 +23,7 @@ public class SimpleCalculator {
 				}
 
 				int digit = Integer.parseInt(num);
+				if(digit<1000)
 				sum = sum + digit;
 			}
 
