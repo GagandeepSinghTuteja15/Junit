@@ -12,7 +12,11 @@ public class SimpleCalculator {
 				char[] array = number.toCharArray();
 				String num = "";
 				for (int i = 0; i < array.length; i++) {
-					if (array[i] >= '0' && array[i] <= '9') {
+					if(array[i]=='-')
+					{
+						throw new RuntimeException("Negetive Numbers are not allowed");
+					}
+					else if (array[i] >= '0' && array[i] <= '9') {
 
 						num = num + array[i];
 					}
@@ -22,8 +26,7 @@ public class SimpleCalculator {
 				sum = sum + digit;
 			}
 
-		
-		return sum;
+			return sum;
+		}
 	}
-}
 }
