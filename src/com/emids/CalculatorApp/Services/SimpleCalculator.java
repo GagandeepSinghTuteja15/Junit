@@ -1,18 +1,29 @@
 package com.emids.CalculatorApp.Services;
 
 public class SimpleCalculator {
-public static int add(String numbers)
-{
-	String delimeter=",|\n|#";
-String[] ArrayNumeber= numbers.split(delimeter);	
-if(ArrayNumeber.length==0)
-	return 0;
+	public static int add(String numbers) {
+		String delimeter = ",|\n|;";
+		String[] arrayNumber = numbers.split(delimeter);
+		if (numbers.isEmpty())
+			return 0;
+		else {
+			int sum = 0;
+			for (String number : arrayNumber) {
+				char[] array = number.toCharArray();
+				String num = "";
+				for (int i = 0; i < array.length; i++) {
+					if (array[i] >= '0' && array[i] <= '9') {
 
-int sum=0;
-for (String number : ArrayNumeber) {
-	int digit=Integer.parseInt(number);
-	sum+=digit;
-}
-return sum;
+						num = num + array[i];
+					}
+				}
+
+				int digit = Integer.parseInt(num);
+				sum = sum + digit;
+			}
+
+		
+		return sum;
+	}
 }
 }
